@@ -30,3 +30,12 @@ figure.testimonial{margin:0;display:flex;flex-direction:column}
 .deliverables p{color:var(--muted);margin-bottom:0}
 .schools-bio .teaching-photo img{height:390px}
 @media(max-width:760px){.deliverables{grid-template-columns:1fr}.schools-bio .teaching-photo img{height:380px}}
+
+/* Keep classroom images within their layout columns. */
+.bio{grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr)}
+.bio>*,.split>*,.routes>*{min-width:0}
+figure.teaching-photo{width:100%;max-width:100%}
+.teaching-photo img{max-width:100%}
+.schools-bio{grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:48px}
+.schools-bio .teaching-photo img{height:340px}
+@media(max-width:760px){.bio,.schools-bio{grid-template-columns:minmax(0,1fr);gap:24px}.schools-bio .teaching-photo{max-width:420px}.schools-bio .teaching-photo img{height:340px}}
